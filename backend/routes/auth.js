@@ -1,14 +1,8 @@
-import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
-import User from "../models/User.js";
+import express from "express";
+import { login } from "../controllers/authController.js";
 
-const login = async (req, res) => {
-  try {
-    const { email, password } = req.body;
+const router = express.Router();
 
-    const user = await User.findOne({ email });
-    if (!user) {
-      return res.status(401).json({ message: "email ou senha invalida" });
-    }
-  } catch (error) {}
-};
+router.post("/login", login);
+
+export default router;

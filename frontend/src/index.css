@@ -1,1 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --color-alta: #1e96fc;
+  --font-ubuntu: "Ubuntu", sans-serif;
+}
