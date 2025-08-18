@@ -3,8 +3,6 @@ import { useAuth } from "../context/AuthContext";
 import axios from "axios";
 import { useNavigate } from "react-router";
 
-console.log("🔥 LOGIN BACKEND ATUAL EXECUTANDO 🔥");
-
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -21,7 +19,7 @@ const Login = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/auth/login",
+        "http://localhost:5000/api/auth/login",
         {
           email,
           password,
@@ -41,7 +39,7 @@ const Login = () => {
       }
     } catch (error) {
       if (error.response) {
-        console.log("Erro backend:", error.response.data);
+        console.log("Erro backend:", error.response.data.message);
         setError(error.response.data.message);
       } else {
         console.log("Erro sem resposta:", error);

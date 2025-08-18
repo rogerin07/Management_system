@@ -10,5 +10,5 @@ app.use("/api/auth", authRoutes);
 
 app.listen(process.env.PORT, () => {
   connectDb();
-  console.log("servidor esta rodando na porta 3000");
+  console.log("servidor esta rodando na porta 5000");
 });
