@@ -3,6 +3,7 @@ import Root from "./utils/Root";
 import Login from "./pages/Login";
 import ProtectedRoutes from "./utils/ProtectedRoutes";
 import Dashboard from "./pages/Dashboard";
+import Categories from "./components/Categories";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
           }
         >
           <Route index element={<h1>Summary of dashboard</h1>} />
-          <Route path="categories" element={<h1>Categories</h1>} />
+          <Route path="categories" element={<Categories />} />
           <Route path="products" element={<h1>Products</h1>} />
           <Route path="suppliers" element={<h1>Suppliers</h1>} />
           <Route path="orders" element={<h1>Orders</h1>} />
