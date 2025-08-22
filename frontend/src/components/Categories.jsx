@@ -93,7 +93,7 @@ const Categories = () => {
           console.error("erro ao deletar");
           alert("Erro ao deletar categoria. Tente novamente.");
         }
-      } catch (error) { 
+      } catch (error) {
         console.error("Erro ao deletar categoria:", error);
         alert("Erro ao deletar categoria. Tente novamente.");
       }
@@ -184,7 +184,7 @@ const Categories = () => {
                     </td>
                     <td className="border border-gray-200 p-2">
                       <button
-                        className="bg-alta text-white p-2 rounded-md hover:bg-altadark/40 hover:text-black mr-2"
+                        className="bg-alta text-white p-2 rounded-md hover:bg-altadark mr-2"
                         onClick={() => handleEdit(category)}
                       >
                         Editar
